@@ -20,3 +20,11 @@ main{
 	font-size: 20px;
 	line-height: 30px;
 }
+
+footer{
+	color: whitesmoke;
+	background-color: #337991;
+	margin: 0 auto;
+	padding: 2px 2px 1px 20px;
+	max-width: 2000px;
+}
