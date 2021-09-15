@@ -153,3 +153,7 @@ footer p{
   #r4:checked ~ .s1{
 	  margin-left: -60%;
   }
+
+  table, th, td {
+	border: 3px solid #2e6c80;
+  }
