@@ -21,6 +21,15 @@ main{
 	line-height: 30px;
 }
 
+li a{
+	color: #337991;
+	text-decoration: none;
+}
+
+li a:hover{
+	color: orangered;
+}
+
 footer{
 	color: whitesmoke;
 	background-color: #337991;
