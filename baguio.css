@@ -38,6 +38,10 @@ footer{
 	max-width: 2000px;
 }
 
+footer p{
+	line-height: 70%;
+}
+
 .image-grid {
 	--gap: 16px;
 	--num-cols: 4;
