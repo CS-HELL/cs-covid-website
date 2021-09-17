@@ -43,6 +43,16 @@ footer p{
 	line-height: 70%;
 }
 
+footer a{
+	text-decoration: none;
+	color: whitesmoke;
+	text-decoration: underline;
+}
+
+footer a:hover{
+	color: red;
+}
+
 .image-grid {
 	--gap: 16px;
 	--num-cols: 4;
