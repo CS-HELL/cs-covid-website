@@ -80,6 +80,10 @@ li a:hover {
 }
 
 footer {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
   color: whitesmoke;
   background-color: #337991;
   margin: 0 auto;
