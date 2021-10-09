@@ -259,17 +259,6 @@ td {
   color: white;
 }
 
-.bgcases {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  background-color: rgb(80, 235, 255);
-  background-size: cover;
-  filter: blur(1px) brightness(80%);
-}
-
 .container_cards {
   width: 80%;
   margin: auto;
@@ -280,7 +269,7 @@ td {
 }
 
 .cards {
-  border: 5px solid white;
+  border: 5px solid rgb(248, 248, 248);
   width: 150px;
   height: 200px;
   display: flex;
@@ -288,11 +277,11 @@ td {
   margin: 5px;
   align-items: center;
   justify-content: flex-end;
-  box-shadow: 0 0 30px white;
-  transition: 300ms all;
+  box-shadow: 0 0 30px rgb(13, 215, 230);
+  transition: 500ms all;
   background-size: cover;
   background-position: center;
-  background-color: rgb(214, 213, 213);
+  background-color: rgb(55, 248, 255);
 }
 
 .cards:hover {
@@ -308,28 +297,33 @@ td {
 
 .imageNews img {
   height: auto;
-	cursor: pointer;
-	display: block;
-	width: 100%;
+  cursor: pointer;
+  display: block;
+  width: 100%;
 }
+
 .imageNews #zoom-In figure img {
-	transform: scale(1);
-	transition: 0.4s ease-in-out;
+  transform: scale(1);
+  transition: 0.4s ease-in-out;
 }
+
 .imageNews #zoom-In figure:hover img {
-	transform: scale(1.2);
+  transform: scale(1.2);
 }
+
 figure {
   box-shadow: 0px 0px 20px black;
-	overflow: hidden;
+  overflow: hidden;
   margin: 0 10px;
 }
+
 .imageNews {
-	display: inline-block;
-	width: 80%;
+  display: inline-block;
+  width: 80%;
 }
+
 .Centered {
-  text-align:center;
+  text-align: center;
 }
 
 .cards:hover .cards-content {}
