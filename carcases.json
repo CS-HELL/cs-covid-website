@@ -1,4 +1,4 @@
-{
+[{
     "total_car_cases": [{
         "active_cases": 7810,
         "recovered": 70590,
@@ -11,4 +11,4 @@
         "Ifugao": 8062,
         "Apayao": 6688
     }]
-}
+}]
