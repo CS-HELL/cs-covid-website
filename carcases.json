@@ -1,12 +1,14 @@
-[{
+{
     "total_car_cases": [{
-            "active_cases": 7810
-        },
-        {
-            "recovered": 70590
-        },
-        {
-            "died": 1140
-        }
-    ]
-}]
+        "active_cases": 7810,
+        "recovered": 70590,
+        "died": 1140
+    }],
+    "top_provinces": [{
+        "Baguio City": 26688,
+        "Benguet": 18534,
+        "Kalinga": 9087,
+        "Ifugao": 8062,
+        "Apayao": 6688
+    }]
+}
