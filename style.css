@@ -10,6 +10,7 @@
   font-size: 60px;
   color: whitesmoke;
   font-family: Impact;
+  height: 320px;
 }
 .subheader{
 padding: 30px;
@@ -25,7 +26,7 @@ font-family: helvetica;
 .ul{
 border-style: solid; 
 border-color: #1f375d; 
-
+background-color: white;
 }
 
 .linkedli{
@@ -52,16 +53,17 @@ header{
 body{
   margin: 0;
   font-size: 20px;
-  padding: 10px;
+  padding: 0px;
   line-height: 30px;
   font-family: helvetica;
-  
+  background-image: url(img/white.jpg);
 }
 
 main{
   margin: 10px;
   font-size: 20px;
   line-height: 30px;
+  padding: 20px;
 }
 
 li a{
@@ -208,4 +210,39 @@ footer a:hover{
 
   table, th, td {
   border: 3px solid #2e6c80;
+  background-color: white;
   }
+
+ /* Style for Top Navigation bar */
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #018abe;
+  overflow: hidden;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-color: whitesmoke;
+  border: 1px;
+  padding: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
