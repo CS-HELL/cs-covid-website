@@ -1,0 +1,5 @@
+{
+    "barangay" : ["Barangay1","Barangay2","Barangay3","Barangay4","Barangay5","Barangay6"],
+    "cases" : ["350","100","456","344","899","502"],
+    "deaths" : ["500","324","755","189","20","902"]
+}
