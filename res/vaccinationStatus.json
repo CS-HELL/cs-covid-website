@@ -1,121 +1,124 @@
-[{
-        "barangayName": "Bakakeng North",
-        "registeredApproximatePopulation": 4446,
-        "vaccineType": [{
-                "vaccineName": "Pfizer",
-                "firstDose": 11,
-                "secondDose": 45
-            },
-            {
-                "vaccineName": "Moderna",
-                "firstDose": 163,
-                "secondDose": 178
-            },
-            {
-                "vaccineName": "J&J",
-                "firstDose": 192,
-                "secondDose": 245
-            },
-            {
-                "vaccineName": "Astrazeneca",
-                "firstDose": 609,
-                "secondDose": 625
-            },
-            {
-                "vaccineName": "Sinovac",
-                "firstDose": 688,
-                "secondDose": 1462
-            }
-        ]
-    },
-    {
-        "barangayName": "Bakakeng Central",
-        "registeredApproximatePopulation": 4940,
-        "vaccineType": [{
-                "vaccineName": "Pfizer",
-                "firstDose": 20,
-                "secondDose": 47
-            },
-            {
-                "vaccineName": "Moderna",
-                "firstDose": 157,
-                "secondDose": 178
-            },
-            {
-                "vaccineName": "J&J",
-                "firstDose": 1072,
-                "secondDose": 1202
-            },
-            {
-                "vaccineName": "Astrazeneca",
-                "firstDose": 721,
-                "secondDose": 1011
-            },
-            {
-                "vaccineName": "Sinovac",
-                "firstDose": 200,
-                "secondDose": 236
-            }
-        ]
-    },
-    {
-        "barangayName": "Trancoville",
-        "registeredApproximatePopulation": 2809,
-        "vaccineType": [{
-                "vaccineName": "Pfizer",
-                "firstDose": 55,
-                "secondDose": 62
-            },
-            {
-                "vaccineName": "Moderna",
-                "firstDose": 99,
-                "secondDose": 102
-            },
-            {
-                "vaccineName": "J&J",
-                "firstDose": 300,
-                "secondDose": 352
-            },
-            {
-                "vaccineName": "Astrazeneca",
-                "firstDose": 421,
-                "secondDose": 374
-            },
-            {
-                "vaccineName": "Sinovac",
-                "firstDose": 819,
-                "secondDose": 373
-            }
-        ]
-    },
-    {
-        "barangayName": "Brookside",
-        "registeredApproximatePopulation": 2316,
-        "vaccineType": [{
-                "vaccineName": "Pfizer",
-                "firstDose": 12,
-                "secondDose": 18
-            },
-            {
-                "vaccineName": "Moderna",
-                "firstDose": 79,
-                "secondDose": 150
-            },
-            {
-                "vaccineName": "J&J",
-                "firstDose": 170,
-                "secondDose": 176
-            },
-            {
-                "vaccineName": "Astrazeneca",
-                "firstDose": 260,
-                "secondDose": 263
-            },
-            {
-                "vaccineName": "Sinovac",
-                "firstDose": 442,
-                "secondDose": 593
-            }
-        ]
-    }
-]
+{
+    "Barangay": [{
+            "barangayName": "Bakakeng North",
+            "registeredApproximatePopulation": 4446,
+            "vaccineType": [{
+                    "vaccineName": "Pfizer",
+                    "firstDose": 11,
+                    "secondDose": 45
+                },
+                {
+                    "vaccineName": "Moderna",
+                    "firstDose": 163,
+                    "secondDose": 178
+                },
+                {
+                    "vaccineName": "J&J",
+                    "firstDose": 192,
+                    "secondDose": 245
+                },
+                {
+                    "vaccineName": "Astrazeneca",
+                    "firstDose": 609,
+                    "secondDose": 625
+                },
+                {
+                    "vaccineName": "Sinovac",
+                    "firstDose": 688,
+                    "secondDose": 1462
+                }
+            ]
+        },
+        {
+            "barangayName": "Bakakeng Central",
+            "registeredApproximatePopulation": 4940,
+            "vaccineType": [{
+                    "vaccineName": "Pfizer",
+                    "firstDose": 20,
+                    "secondDose": 47
+                },
+                {
+                    "vaccineName": "Moderna",
+                    "firstDose": 157,
+                    "secondDose": 178
+                },
+                {
+                    "vaccineName": "J&J",
+                    "firstDose": 1072,
+                    "secondDose": 1202
+                },
+                {
+                    "vaccineName": "Astrazeneca",
+                    "firstDose": 721,
+                    "secondDose": 1011
+                },
+                {
+                    "vaccineName": "Sinovac",
+                    "firstDose": 200,
+                    "secondDose": 236
+                }
+            ]
+        },
+        {
+            "barangayName": "Trancoville",
+            "registeredApproximatePopulation": 2809,
+            "vaccineType": [{
+                    "vaccineName": "Pfizer",
+                    "firstDose": 55,
+                    "secondDose": 62
+                },
+                {
+                    "vaccineName": "Moderna",
+                    "firstDose": 99,
+                    "secondDose": 102
+                },
+                {
+                    "vaccineName": "J&J",
+                    "firstDose": 300,
+                    "secondDose": 352
+                },
+                {
+                    "vaccineName": "Astrazeneca",
+                    "firstDose": 421,
+                    "secondDose": 374
+                },
+                {
+                    "vaccineName": "Sinovac",
+                    "firstDose": 819,
+                    "secondDose": 373
+                }
+            ]
+        },
+        {
+            "barangayName": "Brookside",
+            "registeredApproximatePopulation": 2316,
+            "vaccineType": [{
+                    "vaccineName": "Pfizer",
+                    "firstDose": 12,
+                    "secondDose": 18
+                },
+                {
+                    "vaccineName": "Moderna",
+                    "firstDose": 79,
+                    "secondDose": 150
+                },
+                {
+                    "vaccineName": "J&J",
+                    "firstDose": 170,
+                    "secondDose": 176
+                },
+                {
+                    "vaccineName": "Astrazeneca",
+                    "firstDose": 260,
+                    "secondDose": 263
+                },
+                {
+                    "vaccineName": "Sinovac",
+                    "firstDose": 442,
+                    "secondDose": 593
+                }
+            ]
+        }
+    ]
+}
+    

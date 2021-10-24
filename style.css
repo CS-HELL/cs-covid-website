@@ -236,7 +236,7 @@ td {
   padding: 0;
   display: inline-block;
   list-style-type: none;
-  
+
 }
 
 /* Style the links inside the navigation bar */
@@ -286,9 +286,9 @@ td {
   flex-direction: column;
   margin: 40px;
   align-items: center;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  transition: transform 1.2s;
+  transition: transform 1.0s;
   transform-style: preserve-3d;
   cursor: pointer;
   justify-content: flex-end;
@@ -299,6 +299,7 @@ td {
 .card-back-content {
   position: absolute;
   text-align: center;
+  /*padding-left: 25px;*/
   height: 100%;
   width: 120%;
 }
@@ -309,7 +310,8 @@ td {
   background-color: #018abe;
   border: 6px solid #32c5ff;
 }
-.card-front-content:hover{
+
+.card-front-content:hover {
   backface-visibility: hidden;
   background-color: #018abe;
   border: 6px solid #32c5ff;
@@ -323,6 +325,7 @@ td {
   box-shadow: 0px 0px 20px rgb(155, 155, 155);
   transform: rotateY(180deg) scale(1.1);
 }
+
 .card-back-content:hover {
   backface-visibility: hidden;
   background-color: rgb(255, 255, 255);
@@ -364,11 +367,16 @@ figure {
 }
 
 .carcases-h2 {
-  font-size: 50px;
-  color: white;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 
 .carcases-p {
-  font-size: 30px;
-  color:rgb(138, 247, 255);
+  font-size: 40px;
+  color: rgb(138, 247, 255);
+}
+
+.carcases-d {
+  font-size: 20px;
+  color: rgb(224, 224, 224);
 }
