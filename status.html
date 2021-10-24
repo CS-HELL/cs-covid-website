@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset='utf-8'>
+    <meta charset="UTF-8">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Vaccination Status</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="img/icon.png">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="covidCases.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- Body -->
@@ -27,17 +27,24 @@
     </header>
 
     <main>
-        <h2 class="subheader">Covid Cases and Deaths per Region in the Philippines</h2>
-        <canvas id="covidChart" width="250" height="200"></canvas>
-        <script src="covidCases.js"></script>
+        <h2 class="subheader">Covid Cases in CAR</h2>
+        <canvas id="myCanvas" width="1050" height="2000"
+        style="border:1px solid #744141;">
+        </canvas>
+        <button id="totalCasesButton">Total number of Cases</button>
+        <button id="totalDeathsButton">Total number of Deaths</button>
+        <script>
+            document.getElementById("totalCasesButton").addEventListener("click", totalCasesButton);
+            document.getElementById("totalDeathsButton").addEventListener("click", totalDeathsButton);
+        </script>
         <div class="container_cards">
             
         </div>
     </main>
     
-    <canvas id="covidChart" width="250" height="200"></canvas>
+     <canvas id="covidChart" width="250" height="200"></canvas>
 
-    <script src='carcases.js' type="text/javascript"></script>
+    <!--- <script src='carcases.js' type="text/javascript"></script> --->
 
     <footer>
         <p>This site was created for academic purpose. All rights reserved.</p>
