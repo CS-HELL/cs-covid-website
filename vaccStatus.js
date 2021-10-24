@@ -35,7 +35,7 @@ function getCarcasesFromJSON(carCasesJSON) {
 //                     <p class="carcases-p"><b>${data[0].Sequence_Key[i]}</b></p>
 //                     <p class="carcases-p""><small>Details</small></p>
 //                 </div>
-    
+
 //                 <div class="card-back-content"">
 //                     <h2 class="carcases-h2>test</h2>
 //                     <p class="carcases-p"><b>test</b></p>
