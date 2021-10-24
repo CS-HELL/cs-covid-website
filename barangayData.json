@@ -1,5 +1,25 @@
-{
-    "barangay" : ["Barangay1","Barangay2","Barangay3","Barangay4","Barangay5","Barangay6"],
-    "cases" : ["350","100","456","344","899","502"],
-    "deaths" : ["500","324","755","189","20","902"]
-}
+[
+    {
+        "barangay": "Bakakeng North",
+        "cases": 350,
+        "deaths": 500
+    },
+
+    {
+        "barangay": "Bakakeng Central",
+        "cases": 100,
+        "deaths": 324
+    },
+
+    {
+        "barangay": "Trancoville",
+        "cases": 456,
+        "deaths": 755
+    },
+
+    {
+        "barangay": "Brookside",
+        "cases": 237,
+        "deaths": 92
+    }
+]
