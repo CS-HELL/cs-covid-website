@@ -277,7 +277,7 @@ td {
   justify-content: center;
 }
 
-
+/* https://stackoverflow.com/questions/41461101/flip-a-3d-card-with-css */
 /* Cards Format */
 .cards {
   width: 200px;
