@@ -268,9 +268,9 @@ td {
 
 /* Container Format */
 .container_cards {
-  width: 50%;
+  width: 40%;
   margin: auto;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -292,7 +292,6 @@ td {
   transform-style: preserve-3d;
   cursor: pointer;
   justify-content: flex-end;
-
 }
 
 .card-front-content,
@@ -300,6 +299,7 @@ td {
   position: absolute;
   text-align: center;
   /*padding-left: 25px;*/
+  padding: 10px;
   height: 100%;
   width: 120%;
 }
@@ -308,28 +308,35 @@ td {
 .card-front-content {
   backface-visibility: hidden;
   background-color: #018abe;
-  border: 6px solid #32c5ff;
+  
 }
 
 .card-front-content:hover {
   backface-visibility: hidden;
   background-color: #018abe;
-  border: 6px solid #32c5ff;
+  border: 2px solid #ffffff;
   box-shadow: 0px 0px 30px rgb(0, 204, 255);
 }
 
 .card-back-content {
   backface-visibility: hidden;
   background-color: rgb(255, 255, 255);
-  border: 6px solid #32c5ff;
   box-shadow: 0px 0px 20px rgb(155, 155, 155);
   transform: rotateY(180deg) scale(1.1);
+  overflow-y: auto;
+}
+
+.card-back-content::-webkit-scrollbar{
+  width: 6px;
+  background-color: #e0e0e0;
+}
+.card-back-content::-webkit-scrollbar-thumb{
+  background-color:rgba(196, 196, 196, 0.774)
 }
 
 .card-back-content:hover {
   backface-visibility: hidden;
   background-color: rgb(255, 255, 255);
-  border: 6px solid #32c5ff;
   box-shadow: 0px 0px 20px rgb(155, 155, 155);
   transform: rotateY(180deg) scale(1.1);
   box-shadow: 0px 0px 30px rgb(0, 204, 255);

@@ -17,7 +17,7 @@ var sumA = 0;
 
 // https://www.tutorialspoint.com/how-to-import-local-json-file-data-to-my-javascript-variable
 function getBarangayStatusFromJSON(vaccinationStatusJSON) {
-    fetch(vaccinationStatusJSON)
+    fetch(vaccinationStatusJSON, { mode: 'no-cors'})
     .then(response => {
         return response.json();
     })
@@ -53,6 +53,13 @@ function generateCards(data) {
                 </div>
 
                 <div class="card-back-content"">
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
+                    <h2 class="carcases-h2>test</h2>
                     <h2 class="carcases-h2>test</h2>
                     <p class="carcases-p"><b>test</b></p>
                     <p class="carcases-p""><small>23</small></p>
