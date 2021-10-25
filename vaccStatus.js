@@ -25,9 +25,8 @@ function getBarangayStatusFromJSON(vaccinationStatusJSON) {
             perBarangayStatus = data.Barangay;
             console.log(perBarangayStatus);
 
-
             populateDropBox(perBarangayStatus);
-            
+            populateDosesAdministeredPerBarangay(perBarangayStatus);
         })
         .catch(error => {
             console.error("Something went wrong with retrieving the data.");
@@ -36,21 +35,29 @@ function getBarangayStatusFromJSON(vaccinationStatusJSON) {
 
 // https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
 function generateCard(data, target) {
-    populateDosesAdministeredPerBarangay(data);
 
     var dynamic = document.querySelector('.container_cards');
     for (var i = 0; i < data.length; i++) {
 
         var fetch = document.querySelector('.container_cards').innerHTML;
 
-        if(data[i].barangayName == target){
+        // Generates the card with data.
+        if (data[i].barangayName == target) {
             dynamic.innerHTML =
-            `<div class="cards" id="cardDiv" onclick="flip(event)">
+                `<div class="cards" id="cardDiv" onclick="flip(event)">
                 <div class="card-front-content">
+
+                <div class="CityName">
                     <h2 class="carcases-h2">${data[i].barangayName}</h2>
+                    </div>
+
+                    <div class="DosesAdministered">
                     <p class="carcases-p"><b>${dosesAdministeredPerBarangay[i]}</b></p>
-                    <p class="carcases-d"><b></b></p>
-                    <p class="carcases-d""><small>More Details</small></p>
+                    </div>
+
+                    <div class="Details">
+                    <p class="carcases-d""><small>Click for more details.</small></p>
+                    </div>
                 </div>
 
                 <div class="card-back-content"">
@@ -67,9 +74,6 @@ function generateCard(data, target) {
                 </div>
             </div>` + fetch;
         }
-        
-
-        // total = total + data[0].Sequence_Value[i];
     }
 };
 
@@ -80,6 +84,7 @@ function populateDropBox(data) {
     for (var i = 0; i < data.length; i++) {
         var fetch = document.querySelector('.options-container').innerHTML;
 
+        // Generates the options for the "Select Barangay" Drop Box
         dynamic.innerHTML =
             `<div class="option">
                 <input type="radio" class="radio" id="${data[i].barangayName}" name="category" />
@@ -92,23 +97,22 @@ function populateDropBox(data) {
 function selectOption(data) {
     const selected = document.querySelector(".selected");
     const optionsContainer = document.querySelector(".options-container");
-    var card = document.getElementsByClassName(".cards");
-
     const optionsList = document.querySelectorAll(".option");
 
-    selected.addEventListener("click", () => {
-        
+    selected.addEventListener("click", () => { // Active Ooption
         optionsContainer.classList.toggle("active");
-        
     });
 
-    optionsList.forEach(o => {
+    optionsList.forEach(o => { // For each Data
         o.addEventListener("click", () => {
             selected.innerHTML = o.querySelector("label").innerHTML;
             optionsContainer.classList.remove("active");
-            
+
+            // Check whether there is an existing card in the webpage.
+            if (document.querySelector(".cards")) {
+                document.querySelector(".cards").remove(); // Delete that card.
+            }
             generateCard(data, selected.innerHTML);
-            
         });
     });
 }
@@ -116,8 +120,9 @@ function selectOption(data) {
 function populateDosesAdministeredPerBarangay(data) {
     for (var i = 0; i < data.length; i++) {
         for (var j = 0; j < data[i].vaccineType.length; j++) {
+            // Adds the first dose and second dose of a vaccine type.
             sumB = data[i].vaccineType[j].firstDose + data[i].vaccineType[j].secondDose;
-            sumA += sumB;
+            sumA += sumB; // Total Vaccine Administered
         }
 
         dosesAdministeredPerBarangay.push(formatNumber(sumA));
@@ -127,11 +132,11 @@ function populateDosesAdministeredPerBarangay(data) {
     console.log(dosesAdministeredPerBarangay);
 }
 
-function formatNumber(number) {
+function formatNumber(number) { // Converts the plain integer to a number with comma.
     return number.toLocaleString('en-US')
 }
 
-function flip(event) {
+function flip(event) { // Javascript Flip Event
     var element = event.currentTarget;
     if (element.className === "cards") {
         if (element.style.transform == "rotateY(0deg)") {
@@ -147,7 +152,6 @@ function flip(event) {
 
 function main() {
     getBarangayStatusFromJSON(vaccinationStatusJSON);
-
 };
 
 main();

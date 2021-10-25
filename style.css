@@ -268,9 +268,9 @@ td {
 
 /* Container Format */
 .container_cards {
-  width: 40%;
+  width: 100%;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -280,11 +280,12 @@ td {
 /* https://stackoverflow.com/questions/41461101/flip-a-3d-card-with-css */
 /* Cards Format */
 .cards {
-  width: 200px;
+  width: 50%;
   height: 300px;
   display: flex;
+
   flex-direction: column;
-  margin: 65px;
+  margin: 60px;
   align-items: center;
   background-size: contain;
   background-position: center;
@@ -307,14 +308,47 @@ td {
 /* Cards Content Format */
 .card-front-content {
   backface-visibility: hidden;
+  background-color: #dbdbdb;
+  border-radius: 10px;
+  display: grid;
+
+  grid-template-rows: 80px 150px 80px;
+  grid-template-areas: "CityName" "DosesAdministered" "Details";
+}
+
+.card-front-content .CityName {
   background-color: #018abe;
+  border-radius: 10px;
+  grid-area: CityName;
+}
+
+.card-front-content .DosesAdministered {
+  grid-area: DosesAdministered;
+}
+
+.card-front-content .Details {
+  grid-area: Details;
 }
 
 .card-front-content:hover {
   backface-visibility: hidden;
-  background-color: #018abe;
   border: 2px solid #ffffff;
   box-shadow: 0px 0px 30px rgb(0, 204, 255);
+}
+
+.carcases-h2 {
+  font-size: 30px;
+  color: #e2e2e2;
+}
+
+.carcases-p {
+  font-size: 80px;
+  color: #018abe;
+}
+
+.carcases-d {
+  font-size: 20px;
+  color: rgb(69, 230, 252);
 }
 
 .card-back-content {
@@ -465,17 +499,3 @@ figure {
   text-align: center;
 }
 
-.carcases-h2 {
-  font-size: 30px;
-  color: rgb(255, 255, 255);
-}
-
-.carcases-p {
-  font-size: 40px;
-  color: rgb(138, 247, 255);
-}
-
-.carcases-d {
-  font-size: 20px;
-  color: rgb(224, 224, 224);
-}
