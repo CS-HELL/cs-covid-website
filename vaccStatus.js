@@ -17,7 +17,7 @@ var sumA = 0;
 
 // https://www.tutorialspoint.com/how-to-import-local-json-file-data-to-my-javascript-variable
 function getBarangayStatusFromJSON(vaccinationStatusJSON) {
-    fetch(vaccinationStatusJSON, { mode: 'no-cors' })
+    fetch(vaccinationStatusJSON, {mode: 'no-cors'})
         .then(response => {
             return response.json();
         })
@@ -141,8 +141,7 @@ function flip(event) { // Javascript Flip Event
     if (element.className === "cards") {
         if (element.style.transform == "rotateY(0deg)") {
             element.style.transform = "rotateY(180deg)";
-        }
-        else {
+        } else {
             element.style.transform = "rotateY(0deg)";
         }
 
