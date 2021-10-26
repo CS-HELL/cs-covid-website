@@ -17,7 +17,7 @@ var sumA = 0;
 
 // https://www.tutorialspoint.com/how-to-import-local-json-file-data-to-my-javascript-variable
 function getBarangayStatusFromJSON(vaccinationStatusJSON) {
-    fetch(vaccinationStatusJSON, {mode: 'no-cors'})
+    fetch(vaccinationStatusJSON, { mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
