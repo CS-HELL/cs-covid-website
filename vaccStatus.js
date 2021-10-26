@@ -2,22 +2,21 @@
 https://doh.gov.ph/covid19tracker
 */
 
-var total = 0;
+const total = 0;
 
-var vaccinationStatusJSON = 'res/vaccinationStatus.json';
-var detailedCarCasesJSON = 'res/detailedCarCasesPerProvince.json';
+const vaccinationStatusJSON = 'res/vaccinationStatus.json';
+const detailedCarCasesJSON = 'res/detailedCarCasesPerProvince.json';
 
-let perBarangayStatus = new Array();
+let perBarangayStatus = [];
 
-let dosesAdministeredPerBarangay = new Array();
+let dosesAdministeredPerBarangay = [];
 
-var sumC = 0;
-var sumB = 0;
-var sumA = 0;
+let sumB = 0;
+let sumA = 0;
 
 // https://www.tutorialspoint.com/how-to-import-local-json-file-data-to-my-javascript-variable
 function getBarangayStatusFromJSON(vaccinationStatusJSON) {
-    fetch(vaccinationStatusJSON, { mode: 'no-cors' })
+    fetch(vaccinationStatusJSON, {mode: 'no-cors'})
         .then(response => {
             return response.json();
         })
@@ -35,6 +34,8 @@ function getBarangayStatusFromJSON(vaccinationStatusJSON) {
 
 // https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
 function generateCard(data, target) {
+    let vaccineData = new Array();
+    let registeredPopulation = 0;
 
     var dynamic = document.querySelector('.container_cards');
     for (var i = 0; i < data.length; i++) {
@@ -43,16 +44,20 @@ function generateCard(data, target) {
 
         // Generates the card with data.
         if (data[i].barangayName == target) {
+            vaccineData = data[i].vaccineType;
+            registeredPopulation = data[i].registeredApproximatePopulation;
+            let unvacc = registeredPopulation - dosesAdministeredPerBarangay[i];
+
             dynamic.innerHTML =
                 `<div class="cards" id="cardDiv" onclick="flip(event)">
                 <div class="card-front-content">
 
-                <div class="CityName">
+                    <div class="CityName">
                     <h2 class="carcases-h2">${data[i].barangayName}</h2>
                     </div>
 
                     <div class="DosesAdministered">
-                    <p class="carcases-p"><b>${dosesAdministeredPerBarangay[i]}</b></p>
+                    <p class="carcases-p"><b>${formatNumber(dosesAdministeredPerBarangay[i])}</b></p>
                     </div>
 
                     <div class="Details">
@@ -61,28 +66,60 @@ function generateCard(data, target) {
                 </div>
 
                 <div class="card-back-content"">
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <h2 class="carcases-h2>test</h2>
-                    <p class="carcases-p"><b>test</b></p>
-                    <p class="carcases-p""><small>23</small></p>
+                <div class="bar-container">
+                <h2 class="bar-title">Unvaccinated</h2>
+                <div class="bar">
+                    <div class="bar-inner" style="width: ${stringPercentage(unvacc, registeredPopulation).toString()}" data-percent="${stringPercentage(unvacc, registeredPopulation).toString()}"></div>
+                    </div>
                 </div>
-            </div>` + fetch;
+                </div>
+                </div>
+                ` + fetch;
+            console.log(vaccineData);
+            generateBackCard(vaccineData, registeredPopulation);
         }
+
+    }
+
+};
+
+function generateBackCard(vaccineData, registeredPopulation) {
+    const dynamic = document.querySelector('.bar-container');
+    for (let i = 0; i < vaccineData.length; i++) {
+
+        let doseSum = vaccineData[i].firstDose + vaccineData[i].secondDose;
+        stringPercentage(doseSum, registeredPopulation);
+
+        const fetch = document.querySelector('.bar-container').innerHTML;
+
+        dynamic.innerHTML =
+            `
+            
+                    <h2 class="bar-title">${vaccineData[i].vaccineName}
+                    
+            <p> 1st Dose: ${formatNumber(vaccineData[i].firstDose)} + 2nd Dose: ${formatNumber(vaccineData[i].secondDose)} = ${formatNumber(doseSum)} Total Doses</p>
+            </h2>
+            </div>
+                    <div class="bar">
+                        <div class="bar-inner" style="width: ${stringPercentage(doseSum, registeredPopulation).toString()}" data-percent="${stringPercentage(doseSum, registeredPopulation).toString()}">
+                        
+                        </div>
+                        </div>
+                ` + fetch;
     }
 };
 
+function stringPercentage(min, max) {
+    let percentage = 100 * min / max;
+    return Math.round(percentage) + "%";
+}
+
 function populateDropBox(data) {
 
-    var dynamic = document.querySelector('.options-container');
+    const dynamic = document.querySelector('.options-container');
 
-    for (var i = 0; i < data.length; i++) {
-        var fetch = document.querySelector('.options-container').innerHTML;
+    for (let i = 0; i < data.length; i++) {
+        const fetch = document.querySelector('.options-container').innerHTML;
 
         // Generates the options for the "Select Barangay" Drop Box
         dynamic.innerHTML =
@@ -125,7 +162,7 @@ function populateDosesAdministeredPerBarangay(data) {
             sumA += sumB; // Total Vaccine Administered
         }
 
-        dosesAdministeredPerBarangay.push(formatNumber(sumA));
+        dosesAdministeredPerBarangay.push(sumA);
         sumA = 0;
     }
 
@@ -139,7 +176,7 @@ function formatNumber(number) { // Converts the plain integer to a number with c
 function flip(event) { // Javascript Flip Event
     var element = event.currentTarget;
     if (element.className === "cards") {
-        if (element.style.transform == "rotateY(0deg)") {
+        if (element.style.transform === "rotateY(0deg)") {
             element.style.transform = "rotateY(180deg)";
         } else {
             element.style.transform = "rotateY(0deg)";

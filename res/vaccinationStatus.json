@@ -83,8 +83,8 @@
         },
         {
           "vaccineName": "Astrazeneca",
-          "firstDose": 421,
-          "secondDose": 374
+          "firstDose": 311,
+          "secondDose": 212
         },
         {
           "vaccineName": "Sinovac",
@@ -121,6 +121,169 @@
           "vaccineName": "Sinovac",
           "firstDose": 442,
           "secondDose": 593
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+    {
+      "barangayName": "BGH Compound",
+      "registeredApproximatePopulation": 1860,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 21,
+          "secondDose": 40
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 90,
+          "secondDose": 101
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 122,
+          "secondDose": 130
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 142,
+          "secondDose": 233
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 367,
+          "secondDose": 577
+        }
+      ]
+    },
+    {
+      "barangayName": "Quirino Hill Proper",
+      "registeredApproximatePopulation": 1375,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 17,
+          "secondDose": 55
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 73,
+          "secondDose": 77
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 122,
+          "secondDose": 131
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 133,
+          "secondDose": 122
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 233,
+          "secondDose": 333
+        }
+      ]
+    },
+    {
+      "barangayName": "Quirino Hill Upper",
+      "registeredApproximatePopulation": 2646,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 5,
+          "secondDose": 33
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 55,
+          "secondDose": 133
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 152,
+          "secondDose": 263
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 347,
+          "secondDose": 362
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 439,
+          "secondDose": 833
+        }
+      ]
+    },
+    {
+      "barangayName": "Pinget",
+      "registeredApproximatePopulation": 7774,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 9,
+          "secondDose": 29
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 187,
+          "secondDose": 222
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 544,
+          "secondDose": 233
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 1111,
+          "secondDose": 1233
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 2899,
+          "secondDose": 111
+        }
+      ]
+    },
+    {
+      "barangayName": "Engineers' Hill",
+      "registeredApproximatePopulation": 1762,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 7,
+          "secondDose": 74
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 85,
+          "secondDose": 99
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 126,
+          "secondDose": 153
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 241,
+          "secondDose": 251
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 322,
+          "secondDose": 123
         }
       ]
     }
