@@ -685,6 +685,7 @@ figure {
     right: 0;
     bottom: 0;
     height: 100%;
+    resize: none;
 }
 
 .totalButton {
@@ -694,4 +695,10 @@ figure {
 .totalButton:hover {
     background-color: #018abe;
     color: white;
+}
+
+.aboutUsFooter {
+    position: fixed;
+    width: 100%;
+    bottom:0;
 }
