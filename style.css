@@ -101,8 +101,8 @@ li a:hover {
 }
 
 footer {
-    color: whitesmoke;
-    background-color: #0d0d0e;
+    color: rgb(36, 36, 36);
+    background-image: url(img/backgroundhead.jpg);
     margin: 0 auto;
     padding: 2px 2px 1px 20px;
     max-width: 2000px;
