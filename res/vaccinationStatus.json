@@ -286,6 +286,229 @@
           "secondDose": 123
         }
       ]
+    },
+
+
+
+
+
+
+    {
+      "barangayName": "Camp 7",
+      "registeredApproximatePopulation": 7071,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 72,
+          "secondDose": 200
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 222,
+          "secondDose": 280
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 280,
+          "secondDose": 245
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 730,
+          "secondDose": 1080
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 1604,
+          "secondDose": 2288
+        }
+      ]
+    },
+    {
+      "barangayName": "Camp 8",
+      "registeredApproximatePopulation": 1646,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 19,
+          "secondDose": 32
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 37,
+          "secondDose": 119
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 172,
+          "secondDose": 180
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 180,
+          "secondDose": 192
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 226,
+          "secondDose": 488
+        }
+      ]
+    },
+    {
+      "barangayName": "Country Club Village",
+      "registeredApproximatePopulation": 2705,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 39,
+          "secondDose": 93
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 122,
+          "secondDose": 122
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 122,
+          "secondDose": 432
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 278,
+          "secondDose": 266
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 544,
+          "secondDose": 323
+        }
+      ]
+    },
+    {
+      "barangayName": "Aurora Hill North",
+      "registeredApproximatePopulation": 2763,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 24,
+          "secondDose": 35
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 57,
+          "secondDose": 67
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 252,
+          "secondDose": 282
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 332,
+          "secondDose": 422
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 601,
+          "secondDose": 670
+        }
+      ]
+    },
+    {
+      "barangayName": "Aurora Hill Proper",
+      "registeredApproximatePopulation": 1885,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 2,
+          "secondDose": 3
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 33,
+          "secondDose": 42
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 84,
+          "secondDose": 233
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 321,
+          "secondDose": 32
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 454,
+          "secondDose": 444
+        }
+      ]
+    },
+    {
+      "barangayName": "Slaughter House Area",
+      "registeredApproximatePopulation": 8043,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 37,
+          "secondDose": 64
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 110,
+          "secondDose": 138
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 156,
+          "secondDose": 296
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 323,
+          "secondDose": 326
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 388,
+          "secondDose": 927
+        }
+      ]
+    },
+    {
+      "barangayName": "Irisan",
+      "registeredApproximatePopulation": 36562,
+      "vaccineType": [
+        {
+          "vaccineName": "Pfizer",
+          "firstDose": 11,
+          "secondDose": 101
+        },
+        {
+          "vaccineName": "Moderna",
+          "firstDose": 531,
+          "secondDose": 1711
+        },
+        {
+          "vaccineName": "J&J",
+          "firstDose": 1895,
+          "secondDose": 3549
+        },
+        {
+          "vaccineName": "Astrazeneca",
+          "firstDose": 4833,
+          "secondDose": 5273
+        },
+        {
+          "vaccineName": "Sinovac",
+          "firstDose": 6953,
+          "secondDose": 11112
+        }
+      ]
     }
   ]
 }
