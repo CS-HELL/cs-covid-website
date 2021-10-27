@@ -8,14 +8,12 @@ const vaccinationStatusJSON = 'res/vaccinationStatus.json';
 const detailedCarCasesJSON = 'res/detailedCarCasesPerProvince.json';
 
 let perBarangayStatus = [];
-let dosesAdministeredPerBarangay = [];
 
-let sumB = 0;
-let sumA = 0;
+// Retrieve
 
 // Madriaga src: https://www.tutorialspoint.com/how-to-import-local-json-file-data-to-my-javascript-variable
 function getBarangayStatusFromJSON(vaccinationStatusJSON) {
-    fetch(vaccinationStatusJSON, {mode: 'no-cors'})
+    fetch(vaccinationStatusJSON, { mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -23,13 +21,16 @@ function getBarangayStatusFromJSON(vaccinationStatusJSON) {
             perBarangayStatus = data.Barangay;
             console.log(perBarangayStatus);
 
+            // Sort the array alphabetically (barangayName).
+            perBarangayStatus.sort((a, b) => b.barangayName.localeCompare(a.barangayName))
             populateDropBox(perBarangayStatus);
-            populateDosesAdministeredPerBarangay(perBarangayStatus);
         })
         .catch(error => {
             console.error("Something went wrong with retrieving the data.");
         });
 }
+
+// Generate
 
 // Andres-Madriaga src: https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
 function generateCard(data, target) {
@@ -45,7 +46,9 @@ function generateCard(data, target) {
         if (data[i].barangayName == target) {
             vaccineData = data[i].vaccineType;
             registeredPopulation = data[i].registeredApproximatePopulation;
-            let unvacc = registeredPopulation - dosesAdministeredPerBarangay[i];
+
+            let totalDoses = computeDosesAdministered(data[i].vaccineType);
+            let unvacc = registeredPopulation - totalDoses;
 
             dynamic.innerHTML =
                 `
@@ -56,7 +59,7 @@ function generateCard(data, target) {
                         </div>
 
                         <div class="DosesAdministered">
-                            <p class="carcases-p"><b>${formatNumber(dosesAdministeredPerBarangay[i])}</b></p>
+                            <p class="carcases-p"><b>${formatNumber(totalDoses)}</b></p>
                         </div>
 
                         <div class="Details">
@@ -66,6 +69,7 @@ function generateCard(data, target) {
 
                     <div class="card-back-content"">
                         <div class="bar-container">
+                            <h2 class="bar-title">--------------------------------------</h2>
                             <h2 class="bar-title">Unvaccinated</h2>
                         <div class="bar">
 
@@ -108,13 +112,14 @@ function generateBackCard(vaccineData, registeredPopulation) {
     }
 };
 
-function stringPercentage(min, max) {
-    let percentage = 100 * min / max;
-    return (percentage.toFixed(2)) + "%";
-}
+// Populate
 
 // Capistrano
 function populateDropBox(data) {
+    const dataArray = data;
+    dataArray.sort();
+
+    console.log(dataArray);
 
     const dynamic = document.querySelector('.options-container');
 
@@ -130,6 +135,8 @@ function populateDropBox(data) {
     }
     selectOption(data);
 }
+
+// Select
 
 // Capistrano src: https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
 function selectOption(data) {
@@ -156,25 +163,21 @@ function selectOption(data) {
 }
 
 
-function populateDosesAdministeredPerBarangay(data) {
+// Compute
+
+function computeDosesAdministered(data) {
+    let sumB = 0;
+    let sumA = 0;
+
     for (var i = 0; i < data.length; i++) {
-        for (var j = 0; j < data[i].vaccineType.length; j++) {
-            // Adds the first dose and second dose of a vaccine type.
-            sumB = data[i].vaccineType[j].firstDose + data[i].vaccineType[j].secondDose;
-            sumA += sumB; // Total Vaccine Administered
-        }
-
-        dosesAdministeredPerBarangay.push(sumA);
-        sumA = 0;
+        // Adds the first dose and second dose of a vaccine type.
+        sumB = data[i].firstDose + data[i].secondDose;
+        sumA += sumB; // Total Vaccine Administered
     }
-
-    console.log(dosesAdministeredPerBarangay);
+    return sumA;
 }
 
-// Salenga
-function formatNumber(number) { // Converts the plain integer to a number with comma.
-    return number.toLocaleString('en-US')
-}
+// Extra
 
 // Madriaga src: https://3dtransforms.desandro.com/card-flip
 function flip(event) { // Javascript Flip Event
@@ -190,9 +193,22 @@ function flip(event) { // Javascript Flip Event
     }
 };
 
+// Salenga
+function formatNumber(number) { // Converts the plain integer to a number with comma.
+    return number.toLocaleString('en-US')
+}
+
+function stringPercentage(min, max) {
+    let percentage = 100 * min / max;
+    return (percentage.toFixed(2)) + "%";
+}
+
 function main() {
     getBarangayStatusFromJSON(vaccinationStatusJSON);
 };
+
+
+// Main
 
 main();
 

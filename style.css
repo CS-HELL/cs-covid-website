@@ -22,8 +22,20 @@
     border-radius: 10px;
     color: #0c4c8a;
     background-image: url(img/backgroundhead.jpg);
-    background-repeat: no-repeat;
+    position: relative;
+    transition: 0.3s ease-in-out;
 }
+
+/*Posts Container hover-effect*/
+.subheader:hover{
+    position: relative;
+    border: none;
+    box-shadow: 0px 0px 30px rgb(0, 204, 255);
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
 
 .tableHeader {
     padding: 30px;
@@ -89,8 +101,8 @@ li a:hover {
 }
 
 footer {
-    color: whitesmoke;
-    background-color: #0d0d0e;
+    color: rgb(36, 36, 36);
+    background-image: url(img/backgroundhead.jpg);
     margin: 0 auto;
     padding: 2px 2px 1px 20px;
     max-width: 2000px;
@@ -316,6 +328,18 @@ td {
     width: calc(50% - 40px);
     padding: 20px;
     position: relative;
+    transition: 0.4s ease-in-out;
+}
+/*Posts Container hover-effect*/
+.posts-container .post section:hover{
+    position: relative;
+    background-color: #4169e1;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
 .posts-container .post section::before {
@@ -578,7 +602,7 @@ figure {
 
 .imageNews {
     display: inline-block;
-    width: 80%;
+    width: 50%;
 }
 
 .Centered {
