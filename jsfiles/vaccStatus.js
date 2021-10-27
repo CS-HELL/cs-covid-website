@@ -69,6 +69,7 @@ function generateCard(data, target) {
 
                     <div class="card-back-content"">
                         <div class="bar-container">
+                            <h2 class="bar-title">--------------------------------------</h2>
                             <h2 class="bar-title">Unvaccinated</h2>
                         <div class="bar">
 
