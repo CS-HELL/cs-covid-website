@@ -686,3 +686,12 @@ figure {
     bottom: 0;
     height: 100%;
 }
+
+.totalButton {
+    background-color: #7bd1ee;
+}
+
+.totalButton:hover {
+    background-color: #018abe;
+    color: white;
+}
