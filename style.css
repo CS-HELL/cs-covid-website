@@ -75,18 +75,22 @@ main {
     padding: 20px;
 }
 
+li {
+    list-style-type: disc;
+}
+
 li a {
-    color: #337991;
+    color: #7bd1ee;
     text-decoration: none;
 }
 
 li a:hover {
-    color: orangered;
+    color: rgb(255, 199, 195);
 }
 
 footer {
     color: whitesmoke;
-    background-color: #337991;
+    background-color: #0d0d0e;
     margin: 0 auto;
     padding: 2px 2px 1px 20px;
     max-width: 2000px;
@@ -151,6 +155,7 @@ footer a:hover {
 }
 
 .slidershow {
+    
     width: 913px;
     height: 580px;
     overflow: hidden;
@@ -187,6 +192,18 @@ input[name="r"] {
     visibility: hidden;
 }
 
+.container-slide {
+    width: 100%;
+    height: 20%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 600px;
+    padding-left: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
 .slides {
     width: 500%;
     height: 100%;
@@ -270,6 +287,71 @@ td {
     background-color: #04AA6D;
     color: white;
 }
+
+.posts-container {
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.posts-container .post {
+    display: flex;
+}
+
+.posts-container .po-1 {
+    justify-content: flex-start;
+}
+
+.posts-container .po-2 {
+    justify-content: flex-end;
+}
+
+.posts-container .po-3 {
+    justify-content: flex-start;
+}
+
+.posts-container .post section {
+    background: #018abe;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+
+.posts-container .post section::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background:rgb(0, 0, 0);
+    top: 28px;
+    transform: rotate(45deg);
+}
+
+.po-1 section::before {
+    right: -7px;
+}
+
+.po-2 section::before {
+    left: -7px;
+}
+
+.po-3 section::before {
+    right: -7px;
+}
+
+.post section .details-section{
+    color: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post section p {
+    color: rgb(236, 233, 233);
+    text-align: left;
+    margin: 10px 0 17px 0;
+}
+
 
 /* Container Format */
 .container_cards {
