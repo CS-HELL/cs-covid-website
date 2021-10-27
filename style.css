@@ -316,6 +316,20 @@ td {
     width: calc(50% - 40px);
     padding: 20px;
     position: relative;
+    transition: 0.4s ease-in-out;
+}
+/*Posts Container hover-effect*/
+.posts-container .post section:hover{
+    position: relative;
+    background-color: #4169e1;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
 .posts-container .post section::before {
