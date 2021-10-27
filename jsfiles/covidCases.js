@@ -1,7 +1,7 @@
 var totalCases, totalDeaths;
 
 // Ferrer-Napeek
-fetch("./res/barangayData.json")
+fetch("./res/barangayDataFile.json")
     .then(function(resp) {
         return resp.json();
     })
@@ -9,13 +9,13 @@ fetch("./res/barangayData.json")
 
        var sumCases=0;
        var sumDeaths=0;
-       for(count = 0; count<data.length; count++){
-        showGraph(data[count].barangay,count,JSON.parse(data[count].cases),JSON.parse(data[count].deaths));
+       for(count = 0; count<data.Barangay.length; count++){
+        showGraph(data.Barangay[count].barangayName,count,JSON.parse(data.Barangay[count].cases),JSON.parse(data.Barangay[count].deaths));
         
-        var readCases = JSON.parse(data[count].cases);
+        var readCases = JSON.parse(data.Barangay[count].cases);
         sumCases = sumCases+readCases;
-
-        var readDeaths = JSON.parse(data[count].deaths);
+        
+        var readDeaths = JSON.parse(data.Barangay[count].deaths);
         sumDeaths = sumDeaths+readDeaths;
        }
        totalCases = sumCases;
@@ -23,7 +23,7 @@ fetch("./res/barangayData.json")
     });
 
 function changePosition(count){
-    var y = 200*(count+1);
+    var y = 180*(count+0.6);
     return y;
 }
 
@@ -35,19 +35,19 @@ var ctx = canvas.getContext("2d");
 
 //cases
 ctx.fillStyle = "#F7D358"; //cases indicate
-ctx.fillRect(262.5, 10, 30,30); // x , y , width , height
+ctx.fillRect(90, 10, 30,30); // x , y , width , height
 
 ctx.fillStyle = "#101907"; //font color
 ctx.font = "30px Arial"; //cases
-ctx.fillText("Cases", 300, 35); //text, x , y
+ctx.fillText("Cases", 130, 35); //text, x , y
 
 //deaths
 ctx.fillStyle = "#FA5858"; //deaths indicate
-ctx.fillRect(525, 10, 30,30); // x , y , width , height
+ctx.fillRect(320, 10, 30,30); // x , y , width , height
 
 ctx.fillStyle = "#101907"; //font color
 ctx.font = "30px Arial"; //deaths
-ctx.fillText("Deaths", 562.5, 35); //text, x , y
+ctx.fillText("Deaths", 359.5, 35); //text, x , y
 
 //
 
@@ -56,14 +56,14 @@ ctx.font = "30px Arial"; //barangay
 ctx.fillText(barangay, 10, changePosition(count)); //text, x , y
 
 ctx.fillStyle = "#F7D358"; //cases
-ctx.fillRect(10, changePosition(count)+40, casesData,30); // x , y , width , height
+ctx.fillRect(10, changePosition(count)+40, casesData,20); // x , y , width , height
 
 ctx.fillStyle = "#101907"; //font color
 ctx.font = "20px Arial"; //Number of Cases
 ctx.fillText(casesData, 10, changePosition(count)+35); //text, x , y
 
 ctx.fillStyle = "#FA5858"; //deaths
-ctx.fillRect(10, changePosition(count)+100, deathsData,30); // x , y , width , height
+ctx.fillRect(10, changePosition(count)+100, deathsData,20); // x , y , width , height
 
 ctx.fillStyle = "#101907"; //font color
 ctx.font = "20px Arial"; //Number of Cases

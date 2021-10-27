@@ -29,7 +29,9 @@
           "firstDose": 688,
           "secondDose": 1462
         }
-      ]
+      ],
+      "cases": 432,
+      "deaths": 23
     },
     {
       "barangayName": "Bakakeng Central",
@@ -60,7 +62,9 @@
           "firstDose": 200,
           "secondDose": 236
         }
-      ]
+      ],
+      "cases": 234,
+      "deaths": 43
     },
     {
       "barangayName": "Trancoville",
@@ -91,7 +95,9 @@
           "firstDose": 819,
           "secondDose": 373
         }
-      ]
+      ],
+      "cases": 232,
+      "deaths": 12
     },
     {
       "barangayName": "Brookside",
@@ -122,7 +128,9 @@
           "firstDose": 442,
           "secondDose": 593
         }
-      ]
+      ],
+      "cases": 23,
+      "deaths": 3
     },
 
 
@@ -161,7 +169,9 @@
           "firstDose": 367,
           "secondDose": 577
         }
-      ]
+      ],
+      "cases": 45,
+      "deaths": 3
     },
     {
       "barangayName": "Quirino Hill Proper",
@@ -192,7 +202,9 @@
           "firstDose": 233,
           "secondDose": 333
         }
-      ]
+      ],
+      "cases": 33,
+      "deaths": 2
     },
     {
       "barangayName": "Quirino Hill Upper",
@@ -223,7 +235,9 @@
           "firstDose": 439,
           "secondDose": 833
         }
-      ]
+      ],
+      "cases": 432,
+      "deaths": 1
     },
     {
       "barangayName": "Pinget",
@@ -254,7 +268,9 @@
           "firstDose": 2899,
           "secondDose": 111
         }
-      ]
+      ],
+      "cases": 78,
+      "deaths": 56
     },
     {
       "barangayName": "Engineers' Hill",
@@ -285,7 +301,9 @@
           "firstDose": 322,
           "secondDose": 123
         }
-      ]
+      ],
+      "cases": 32,
+      "deaths": 1
     },
 
 
@@ -322,7 +340,9 @@
           "firstDose": 1604,
           "secondDose": 2288
         }
-      ]
+      ],
+      "cases": 55,
+      "deaths": 3
     },
     {
       "barangayName": "Camp 8",
@@ -353,7 +373,9 @@
           "firstDose": 226,
           "secondDose": 488
         }
-      ]
+      ],
+      "cases": 66,
+      "deaths": 2
     },
     {
       "barangayName": "Country Club Village",
@@ -384,7 +406,9 @@
           "firstDose": 544,
           "secondDose": 323
         }
-      ]
+      ],
+      "cases": 77,
+      "deaths": 2
     },
     {
       "barangayName": "Aurora Hill North",
@@ -415,7 +439,9 @@
           "firstDose": 601,
           "secondDose": 670
         }
-      ]
+      ],
+      "cases": 33,
+      "deaths": 2
     },
     {
       "barangayName": "Aurora Hill Proper",
@@ -446,7 +472,9 @@
           "firstDose": 454,
           "secondDose": 444
         }
-      ]
+      ],
+      "cases": 44,
+      "deaths": 2
     },
     {
       "barangayName": "Slaughter House Area",
@@ -477,7 +505,9 @@
           "firstDose": 388,
           "secondDose": 927
         }
-      ]
+      ],
+      "cases": 321,
+      "deaths": 13
     },
     {
       "barangayName": "Irisan",
@@ -508,7 +538,9 @@
           "firstDose": 6953,
           "secondDose": 11112
         }
-      ]
+      ],
+      "cases": 982,
+      "deaths": 23
     }
   ]
 }

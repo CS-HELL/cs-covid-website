@@ -4,8 +4,7 @@ https://doh.gov.ph/covid19tracker
 
 const total = 0;
 
-const vaccinationStatusJSON = 'res/vaccinationStatus.json';
-const detailedCarCasesJSON = 'res/detailedCarCasesPerProvince.json';
+const vaccinationStatusJSON = 'res/barangayDataFile.json';
 
 let perBarangayStatus = [];
 
