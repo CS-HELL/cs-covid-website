@@ -602,7 +602,7 @@ figure {
 
 .imageNews {
     display: inline-block;
-    width: 80%;
+    width: 50%;
 }
 
 .Centered {
@@ -678,4 +678,3 @@ figure {
   text-align: center;
   font-size: 30px;
 }
-  
