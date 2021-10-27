@@ -654,3 +654,11 @@ figure {
   text-align: center;
   font-size: 30px;
 }
+
+.aboutUsMain {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
